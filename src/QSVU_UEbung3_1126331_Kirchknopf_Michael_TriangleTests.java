@@ -10,7 +10,7 @@ public class QSVU_UEbung3_1126331_Kirchknopf_Michael_TriangleTests {
 	QSVU_UEbung3_1126331_Kirchknopf_Michael_Triangle triangle;
 	
 	public QSVU_UEbung3_1126331_Kirchknopf_Michael_TriangleTests() {
-		new QSVU_UEbung3_1126331_Kirchknopf_Michael_Triangle();
+		triangle = new QSVU_UEbung3_1126331_Kirchknopf_Michael_Triangle();
 	}
 
 	@Test
