@@ -25,7 +25,7 @@ public class QSVU_UEbung3_1126331_Kirchknopf_Michael_TriangleTests {
 			double h = triangle.calcHypotenuse(3,3);
 			fail("Should not happen");
 		} catch(InvalidParameterException e){
-			assertEquals("Falsche Parameter", e.getMessage());			
+			assertEquals("Ungueltige Parameter", e.getMessage());			
 		}
 	}
 	
@@ -38,4 +38,31 @@ public class QSVU_UEbung3_1126331_Kirchknopf_Michael_TriangleTests {
 			assertEquals("Negativer Parameter", e.getMessage());			
 		}
 	}
+	
+	@Test
+	public void testWinkelVvalidTriangle(){
+		Double h = triangle.calcWinkel(60);
+		assertEquals(h,new Double(30));
+	}
+	
+	@Test
+	public void testWinkelInvalidTriangle(){
+		try{
+			double h = triangle.calcWinkel(90);
+			fail("Should not happen");
+		} catch(InvalidParameterException e){
+			assertEquals("Ungueltiger Parameter", e.getMessage());			
+		}
+	}
+	
+	@Test
+	public void testWinkelInvalidParameter(){
+		try{
+			double h = triangle.calcWinkel(-90);
+			fail("Should not happen");
+		} catch(InvalidParameterException e){
+			assertEquals("Negativer Parameter", e.getMessage());			
+		}
+	}
+	
 }
